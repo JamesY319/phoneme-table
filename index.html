@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>音素表</title>
+</head>
+<body>
+  <h1>音素發音表</h1>
+
+  <button onclick="playSound('p')">/p/</button>
+  <audio id="p" src="sounds/p.mp3"></audio>
+
+  <button onclick="playSound('b')">/b/</button>
+  <audio id="b" src="sounds/b.mp3"></audio>
+
+  <button onclick="playSound('d')">/d/</button>
+  <audio id="d" src="sounds/d.mp3"></audio>
+
+  <button onclick="playSound('k')">/k/</button>
+  <audio id="k" src="sounds/k.mp3"></audio>
+
+  <button onclick="playSound('t')">/t/</button>
+  <audio id="t" src="sounds/t.mp3"></audio>
+
+  <button onclick="playSound('g')">/g/</button>
+  <audio id="g" src="sounds/g.mp3"></audio>
+
+  <script>
+    function playSound(id) {
+      document.getElementById(id).play();
+    }
+  </script>
+</body>
+</html>
