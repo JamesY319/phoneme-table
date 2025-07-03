@@ -1,34 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <title>音素表</title>
+  <style>
+    .container { position: relative; }
+    .chart { width: 100%; }
+    .button {
+      position: absolute;
+      width: 3.2%;
+      height: 4.5%;
+      background-color: transparent;
+      border: 1px dashed red;
+      font-size: 16px;
+      pointer-events: auto;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <h1>音素發音表</h1>
+  <div class="container">
+    <img class="chart" src="images/phoneme_chart.webp" />
 
-  <button onclick="playSound('p')">/p/</button>
-  <audio id="p" src="sounds/p.mp3"></audio>
+    <!-- 子音區 24-->
+    <button class="button" style="top: 65.8%; left: 13.9%;" onclick="playSound('p')">p</button>
+    <button class="button" style="top: 65.8%; left: 3.9%;" onclick="playSound('b')">b</button>
+    <button class="button" style="top: 76.4%; left: 3.9%;" onclick="playSound('d')">d</button>
+    <button class="button" style="top: 76.4%; left: 13.9%;" onclick="playSound('t')">t</button>
+    <button class="button" style="top: 87%; left: 3.9%;" onclick="playSound('g')">g</button>
+    <button class="button" style="top: 87%; left: 13.9%;" onclick="playSound('k')">k</button>
+    <button class="button" style="top: 65.8%; left: 25%;" onclick="playSound('f')">f</button>
+    <button class="button" style="top: 65.8%; left: 35.2%;" onclick="playSound('v')">v</button>
+    <button class="button" style="top: 76.4%; left: 25%;" onclick="playSound('theta')">θ</button>
+    <button class="button" style="top: 76.4%; left: 35.2%;" onclick="playSound('edh')">ð</button>
+    <button class="button" style="top: 87%; left: 25%;" onclick="playSound('s')">s</button>
+    <button class="button" style="top: 87%; left: 35.2%;" onclick="playSound('z')">z</button>
+    <button class="button" style="top: 65.8%; left: 45%;" onclick="playSound('dzh')">dʒ</button>
+    <button class="button" style="top: 76.4%; left: 45%;" onclick="playSound('tch')">tʃ</button>
+    <button class="button" style="top: 87%; left: 45%;" onclick="playSound('esh')">ʃ</button>
+    <button class="button" style="top: 65.8%; left: 55%;" onclick="playSound('ezh')">ʒ</button>
+    <button class="button" style="top: 76.4%; left: 55%;" onclick="playSound('h')">h</button>
+    <button class="button" style="top: 65.8%; left: 66.2%;" onclick="playSound('m')">m</button>
+    <button class="button" style="top: 76.4%; left: 66.2%;" onclick="playSound('n')">n</button>
+    <button class="button" style="top: 87%; left: 66.2%;" onclick="playSound('eng')">ŋ</button>
+    <button class="button" style="top: 65.8%; left: 79.7%;" onclick="playSound('l')">l</button>
+    <button class="button" style="top: 76.4%; left: 79.7%;" onclick="playSound('r')">r</button>
+    <button class="button" style="top: 87%; left: 79.7%;" onclick="playSound('j')">j</button>
+    <button class="button" style="top: 65.8%; left: 89.8%;" onclick="playSound('w')">w</button>
+    
 
-  <button onclick="playSound('b')">/b/</button>
+    <!-- 母音區 20-->
+    <button class="button" style="top: 4.8%; left: 5%;" onclick="playSound('epsilon')">ɛ</button>
+    <button class="button" style="top: 11.6%; left: 5%;" onclick="playSound('e')">e</button>
+    <button class="button" style="top: 18.3%; left: 5%;" onclick="playSound('ae')">æ</button>
+    <button class="button" style="top: 25.1%; left: 5%;" onclick="playSound('aw')">aʊ</button>
+    <button class="button" style="top: 31.9%; left: 5%;" onclick="playSound('ih')">ɪ</button>
+    <button class="button" style="top: 38.7%; left: 5%;" onclick="playSound('uh')">ʊ</button>
+    <button class="button" style="top: 45.5%; left: 5%;" onclick="playSound('o')">o</button>
+    <button class="button" style="top: 52.3%; left: 5%;" onclick="playSound('open_o')">ɔ</button>
+    <button class="button" style="top: 4.8%; left: 25.8%;" onclick="playSound('caret')">ʌ</button>
+    <button class="button" style="top: 11.6%; left: 25.8%;" onclick="playSound('schwa')">ə</button>
+    <button class="button" style="top: 18.3%; left: 25.8%;" onclick="playSound('i')">i</button>
+    <button class="button" style="top: 25.1%; left: 25.8%;" onclick="playSound('ai')">aɪ</button>
+    <button class="button" style="top: 31.9%; left: 25.8%;" onclick="playSound('ju')">ju</button>
+    <button class="button" style="top: 38.7%; left: 25.8%;" onclick="playSound('u')">u</button>
+    <button class="button" style="top: 45.5%; left: 25.8%;" onclick="playSound('oi')">ɔɪ</button>
+    <button class="button" style="top: 4.8%; left: 48.6%;" onclick="playSound('rhotacized_schwa')">ɝ</button>
+    <button class="button" style="top: 11.6%; left: 48.6%;" onclick="playSound('ir')">ɪr</button>
+    <button class="button" style="top: 18.3%; left: 48.6%;" onclick="playSound('epsilon_r')">ɛr</button>
+    <button class="button" style="top: 25.1%; left: 48.6%;" onclick="playSound('open_o_r')">ɔr</button>
+    <button class="button" style="top: 31.9%; left: 48.6%;" onclick="playSound('ar')">ɑr</button>
+
+
+
+    
+  </div>
+
   <audio id="b" src="sounds/b.mp3"></audio>
-
-  <button onclick="playSound('d')">/d/</button>
+  <audio id="p" src="sounds/p.mp3"></audio>
   <audio id="d" src="sounds/d.mp3"></audio>
-
-  <button onclick="playSound('k')">/k/</button>
-  <audio id="k" src="sounds/k.mp3"></audio>
-
-  <button onclick="playSound('t')">/t/</button>
   <audio id="t" src="sounds/t.mp3"></audio>
-
-  <button onclick="playSound('g')">/g/</button>
   <audio id="g" src="sounds/g.mp3"></audio>
+  <audio id="k" src="sounds/k.mp3"></audio>
+  <audio id="f" src="sounds/f.mp3"></audio>
+  <audio id="v" src="sounds/v.mp3"></audio>
+  <audio id="theta" src="sounds/theta.mp3"></audio>       <!-- θ -->
+  <audio id="edh" src="sounds/edh.mp3"></audio>           <!-- ð -->
+  <audio id="s" src="sounds/s.mp3"></audio>
+  <audio id="z" src="sounds/z.mp3"></audio>
+  <audio id="dzh" src="sounds/dzh.mp3"></audio>           <!-- dʒ -->
+  <audio id="tch" src="sounds/tch.mp3"></audio>           <!-- tʃ -->
+  <audio id="esh" src="sounds/esh.mp3"></audio>           <!-- ʃ -->
+  <audio id="ezh" src="sounds/ezh.mp3"></audio>           <!-- ʒ -->
+  <audio id="h" src="sounds/h.mp3"></audio>
+  <audio id="m" src="sounds/m.mp3"></audio>
+  <audio id="n" src="sounds/n.mp3"></audio>
+  <audio id="eng" src="sounds/eng.mp3"></audio>           <!-- ŋ -->
+  <audio id="l" src="sounds/l.mp3"></audio>
+  <audio id="r" src="sounds/r.mp3"></audio>
+  <audio id="j" src="sounds/j.mp3"></audio>
+  <audio id="w" src="sounds/w.mp3"></audio>
+  <audio id="epsilon" src="sounds/epsilon.mp3"></audio>   <!-- ɛ -->
+  <audio id="e" src="sounds/e.mp3"></audio>
+  <audio id="ae" src="sounds/ae.mp3"></audio>             <!-- æ -->
+  <audio id="aw" src="sounds/aw.mp3"></audio>             <!-- aʊ -->
+  <audio id="ih" src="sounds/ih.mp3"></audio>             <!-- ɪ -->
+  <audio id="uh" src="sounds/uh.mp3"></audio>             <!-- ʊ -->
+  <audio id="o" src="sounds/o.mp3"></audio>
+  <audio id="open_o" src="sounds/open_o.mp3"></audio>     <!-- ɔ -->
+  <audio id="caret" src="sounds/caret.mp3"></audio>       <!-- ʌ -->
+  <audio id="schwa" src="sounds/schwa.mp3"></audio>       <!-- ə -->
+  <audio id="i" src="sounds/i.mp3"></audio>
+  <audio id="ai" src="sounds/ai.mp3"></audio>             <!-- aɪ -->
+  <audio id="ju" src="sounds/ju.mp3"></audio>
+  <audio id="u" src="sounds/u.mp3"></audio>
+  <audio id="oi" src="sounds/oi.mp3"></audio>             <!-- ɔɪ -->
+  <audio id="rhotacized_schwa" src="sounds/rhotacized_schwa.mp3"></audio> <!-- ɝ -->
+  <audio id="ir" src="sounds/ir.mp3"></audio>             <!-- Ir → ɪr -->
+  <audio id="epsilon_r" src="sounds/epsilon_r.mp3"></audio> <!-- ɛr -->
+  <audio id="open_o_r" src="sounds/open_o_r.mp3"></audio>   <!-- ɔr -->
+  <audio id="ar" src="sounds/ar.mp3"></audio>             <!-- ɑr -->
+  
+
+
+
 
   <script>
     function playSound(id) {
       document.getElementById(id).play();
     }
+  
+
   </script>
 </body>
 </html>
